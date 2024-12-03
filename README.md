@@ -5,6 +5,8 @@
 > - Implementation of real-time 2D pattern tracking in a video based on a study and selection of publicly available open-source code.
 > - Associate GPS positions to attempt to pre-position the pattern tracking area on a given competitor and improve 2D tracking quality.
 
+#### *See [Drive Trimaran - Georacing](https://drive.google.com/drive/folders/1WpRf6TfOnzKHkWW-l6z-uDcb2UX8svSA?usp=drive_link) (everything is in the Drive, here are just the global traduction and the github links).*
+
 ### Results
 
 <div align="justify"> 
@@ -19,8 +21,8 @@ To use deep learning to identify competitors in an image, it was necessary to cr
 Once the solution was built, I translated it into C# and incorporated it into the company's processes. The [GeoLiveDetect](https://github.com/lauralvd01/GeoLiveDectect.git) repo contains the software developed with a colleague to retrieve the video streams, apply the solution to them and retransmit the results to the web application used for the augmented application. <br /> <br />
 
 <p align="center">
-    <img src="RealTimeMOT\gif\deep_sort_Train14_bateau_2-ezgif.com-video-to-gif-converter.gif" width="49%"/> <img src="RealTimeMOT\gif\deep_sort_Train14_bateau_6-ezgif.com-video-to-gif-converter.gif" width="49%"/>
-    <img src="RealTimeMOT\gif\deep_sort_Train14_vg_3-ezgif.com-video-to-gif-converter.gif" />
+    <img src="DEMOS\Gifs\deep_sort_Train14_bateau_2-ezgif.com-video-to-gif-converter (1).gif" width="49%"/> <img src="DEMOS\Gifs\deep_sort_Train14_bateau_6-ezgif.com-video-to-gif-converter.gif" width="49%"/>
+    <img src="DEMOS\Gifs\deep_sort_Train14_vg_3-ezgif.com-video-to-gif-converter.gif" />
 </p>
 
 <hr/>
@@ -32,7 +34,7 @@ A database of approximately 13,500 images was created using [Roboflow](https://r
 This model is used through a C# code integrated into the implemented tool. <br /> <br />
 
 <p align="center">
-    <img src="detections_bateau_2-ezgif.com-video-to-gif-converter.gif" width="49%"/> <img src="detections_vg_1-ezgif.com-video-to-gif-converter.gif" width="49%"/>
+    <img src="DEMOS\Gifs\detections_bateau_2-ezgif.com-video-to-gif-converter.gif" width="49%"/> <img src="DEMOS\Gifs\detections_vg_1-ezgif.com-video-to-gif-converter.gif" width="49%"/>
 </p>
 
 ### DeepSORT
@@ -40,22 +42,22 @@ This model is used through a C# code integrated into the implemented tool. <br /
 For cross-referencing information between different video frames, a C# version of the [DeepSORT](https://github.com/nwojke/deep_sort) algorithm was adapted. It associates detections from one frame to the next using a Kalman filter and a measurement combining distance and appearance via another deep learning model specialized in identification. Once a boat has been detected in three consecutive frames (a configurable number), it is assigned an identity number, and the information related to that boat is stored until it disappears from the frame. <br /> <br />
 
 <p align="center">
-    <img src="deep_sort_Train14_bateau_2-ezgif.com-video-to-gif-converter (1).gif" width="49%"/> <img src="deep_sort_Train14_vg_1-ezgif.com-video-to-gif-converter.gif" width="49%"/>
+    <img src="DEMOS\Gifs\deep_sort_Train14_bateau_2-ezgif.com-video-to-gif-converter (1).gif" width="49%"/> <img src="DEMOS\Gifs\deep_sort_Train14_vg_1-ezgif.com-video-to-gif-converter.gif" width="49%"/>
 </p>
 
 The collected information enables locating all boats in the image throughout the video. Using this data, the implemented tool can display rectangles around detected boats in the video’s debug interface, each labeled with its identity number. This interface is linked to an online platform offering the same functionalities and will eventually be used to connect with augmented reality rendering systems. It also allows clicking on one (or more) detected boats to select which boats' information will be sent to the augmented reality system.
 
 <p align="center">
-    <img src="Capture2.PNG"/>
-    <img src="Capture.PNG" width="49%"/> <img src="Capture1.PNG" width="49%"/>
+    <img src="DEMOS\Gifs\Capture2.PNG"/>
+    <img src="DEMOS\Gifs\Capture.PNG" width="49%"/> <img src="DEMOS\Gifs\Capture1.PNG" width="49%"/>
 </p>
 
 <hr />
 
-## Folder Structure
+## Folder Structure of the [drive Trimaran - Georacing](https://drive.google.com/drive/folders/1WpRf6TfOnzKHkWW-l6z-uDcb2UX8svSA?usp=drive_link)
 
-### Software for Sébastien
-> Backup of the public repository [Github - Render Control Interface]([https://github.com/lauralvd01/Laura.git](https://github.com/lauralvd01/Render-Control-Interface)).
+### Application pour Sébastien
+> Backup of the public repository [Github - Render Control Interface](https://github.com/lauralvd01/Render-Control-Interface).
 > Software developed for Trimaran's system engineer so that he can remotly (with SSH authentication) control and shut down all machines (called Renders).
 
 <h3 id="DEMOS">DEMOS</h3>
@@ -68,7 +70,7 @@ The collected information enables locating all boats in the image throughout the
 > PDF copies of each README from the Github repositories created during the internship:
 > - [Github - GeoLiveDetect](https://github.com/lauralvd01/GeoLiveDectect.git)
 > - [Github - RealTimeMOT](https://github.com/lauralvd01/RealTimeMOT.git)
-> - [Github - Render Control Interface]([https://github.com/lauralvd01/Laura.git](https://github.com/lauralvd01/Render-Control-Interface))
+> - [Github - Render Control Interface](https://github.com/lauralvd01/Render-Control-Interface)
 
 ### DOC
 > Documentation on:
